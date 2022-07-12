@@ -1,0 +1,89 @@
+/* 공통요소 */
+
+.ad-border{
+    display: block;
+    position: relative;
+}
+.ad-border::after{
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    /* background: #f00; */
+    content: '';
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+.ad-border img {
+    width: 100%;
+}
+
+
+
+
+/* sp-bg */
+.header-area .logo,
+.search-area .btn-search::before,
+.header-area .search-area .ico-keyboard,
+.header-area .search-area .ico-auto,
+.service-area .link-home::after,
+.header-area .service-area .link-junior::after,
+.header-area .service-area .link-bin::after,
+.gnb-area .gnb-inner .list-item .ico-mail,
+.gnb-area .gnb-inner .list-item .ico-tv,
+.gnb-area .gnb-inner .list-item.ico-live::after,
+.gnb-area .gnb-inner .btn-more::after,
+.sc-news .news-issue .issue-box .media::after,
+.sc-news .group-title .title-area .link-title::before,
+.sc-news .group-title .title-area .link-title::after,
+.sc-news .btn-ic-area .ico-linkall,
+.sc-news .btn-ic-area .ico-sort,
+.sc-news .btn-ic-area .ico-edit,
+.sc-themepost .theme-box .btn-theme::before,
+.sc-themepost .category-area .cat-navi .btn.prev,
+.sc-themepost .category-area .cat-navi .btn.next,
+.theme-plus-area .theme-title .title::after,
+.theme-plus-area .view-navi .btn.prev,
+.theme-plus-area .view-navi .btn.next,
+.theme-plus-area .btn-more-area .ico-plus,
+.sc-login .login-box .ico-naver,
+.sc-login .login-link .find-id::before,
+.sc-login .login-link .join::before,
+.sc-cardnews .card-navi .btn.prev::before,
+.sc-cardnews .card-navi .btn.next::before,
+.notice-area .ser-link::after{
+    background-image: url(../images/sp_bg.png);
+    background-repeat: no-repeat;
+    background-size: 457px auto;
+}
+
+
+
+
+/* sp-bg01 */
+.sc-shopping .shopping-title-area .title::before,
+.sc-shopping .shopping-title-area .title::after,
+.group-goods .goods-navi .btn.prev::before,
+.group-goods .goods-navi .btn.next::before,
+.shopping-wrap .bottom-navi .btn.prev::before,
+.shopping-wrap .bottom-navi .btn.next::before,
+.shopping-wrap .goods-event .event-navi .btn.prev::before,
+.shopping-wrap .goods-event .event-navi .btn.next::before,
+.shopping-wrap .goods-plus .plus-navi .btn.prev::before,
+.shopping-wrap .goods-plus .plus-navi .btn.next::before{
+    background-image: url(../images/sp_bg01.png);
+    background-repeat: no-repeat;
+    /* bgr  */
+    background-size: 107px auto;
+}
+
+
+
+
+
+
+
+.blind{
+    width: 1px; height: 1px;
+    clip: rect(0 0 0 0);
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+}

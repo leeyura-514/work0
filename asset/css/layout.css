@@ -1,0 +1,510 @@
+@import url('./reset.css');
+@import url('./common.css');
+
+
+
+.header-area{
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 12%);
+}
+body{
+    font-size: 12px;
+    line-height: 16px;
+    color: #202020;
+    font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+}
+
+
+/* 헤더 -로고 영역 */
+.header-area .logo-area{
+    position: relative;
+    background-color: #fff;
+    width: 1130px;
+    height: 160px;
+    margin: 0 auto;
+    /* 삭제 padding: 0 30px; */
+    /* overflow: hidden; 로고 왼쪽날개부분 안보여서 삭제*/
+}
+.header-area .logo{
+    position: absolute;
+    top: 50%;
+    left: -9px;
+    margin-top: -32px;
+    /* display: inline-block; 삭제가능? */
+    width: 222px;
+    height: 52px;
+    background-position: 0 -158px;
+    vertical-align: top;
+    content: '';
+}
+.header-area .logo-area .logo a{
+    display: block;
+    height: 100%;
+}
+
+
+/* 헤더 - 검색 창 */
+
+.header-area .search-area{
+    /* 삭제 position: relative; */
+    position: absolute;
+    top: 50%;
+    left: 268px;
+    margin-top: -28px;
+    
+    width: 582px;
+    height: 52px;
+    border: 2px solid #19ce60;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+.header-area .search-area .input-text{
+    width: 444px;
+    height: 24px;
+    padding: 13px 15px;
+    margin: 1px;
+    background-color: #fff;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000;
+    font-weight: 700;
+    /* input고유속성 outline해제 */
+    outline: 0;
+}
+.header-area .search-area .btn-search{
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: 0;
+    width: 56px;
+    height: 56px;
+    background-color: #19ce60;
+    -webkit-border-radius: 0 2px 2px 0;
+    border-radius: 0 2px 2px 0;
+    /* btn에 마우스 올릴 때 커서모양 바뀜 */
+    cursor: pointer;
+    /* top,right -2px값주어 공백없이 위치 */
+}
+.header-area .search-area .btn-search::before{
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-position: -420px 0;
+    vertical-align: top;
+}
+.header-area .search-area .btn-keyboard{
+    position: absolute;
+    top: 0;
+    right: 84px;
+    bottom: 0;
+    width: 36px;
+    z-index: 400;
+}
+.header-area .search-area .ico-keyboard{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    width: 20px;
+    height: 12px;
+    background-position: -420px -395px;
+    vertical-align: top;
+    margin: -6px 0 0 -10px;
+}
+.header-area .search-area .btn-auto{
+    position: absolute;
+    top: 0;
+    right: 64px;
+    bottom: 0;
+    width: 22px;
+    height: 100%;
+}
+.header-area .search-area .ico-auto{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    width: 10px;
+    height: 5px;
+    background-position: -408px -77px;
+    /* 좌표 찾아서 변경함 */
+    vertical-align: top;
+    margin: -2px 0 0 -5px;
+}
+
+
+
+/* 헤더 - 서비스링크 */
+
+.header-area .service-area{
+    position: absolute;
+    top: 12px;
+    right: 27px;
+}
+.header-area .service-area a{
+    float: left;
+    font-size: 11px;
+    color: #404040;
+}
+.header-area .service-area .link-home::after{
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-position: -308px -345px;
+    vertical-align: top;
+    content: '';
+    margin: -3px 0 0 3px;
+}
+.header-area .service-area .bar{
+    float: left;
+    width: 1px;
+    height: 10px;
+    margin: 3px 7px;
+    background-color: #e4e8eb;
+}
+.header-area .service-area .link-junior::after{
+    content: '';
+    display: inline-block;
+    width: 60px;
+    height: 10px;
+    background-position: -200px -330px;
+    vertical-align: top;
+    margin: 3px;
+}
+
+.header-area .service-area .link-bin::after{
+    content: '';
+    display: inline-block;
+    width: 34px;
+    height: 11px;
+    background-position: -380px -199px;
+    vertical-align: top;
+    margin: 3px 3px 2px;
+}
+
+
+/* 메뉴 영역 */
+
+.gnb-area{border-top: 1px solid #e4e8eb;}
+.gnb-area .gnb-inner {
+    /* position: relative; */
+    width: 1130px;
+    margin: 0 auto;
+    padding: 11px 0;
+}
+.gnb-area .gnb-inner::after{
+    clear: both;
+    display: block;
+    content: '';
+}
+.gnb-area .gnb-inner .gnb-list {
+    float: left;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: -.3px;
+}
+.gnb-area .gnb-inner .gnb-list.green{
+    color: #03c75a;
+}
+
+.gnb-area .gnb-inner .list-item {
+    float: left;
+}
+.gnb-area .gnb-inner .list-item .ico-mail{
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    background-position: -420px -73px;
+    vertical-align: top;
+    margin: 3px 9px 0 0;
+}
+.gnb-area .gnb-inner .list-item .ico-tv {
+    display: inline-block;
+    width: 12px;
+    height: 14px;
+    background-position: -444px -49px;
+    vertical-align: top;
+    margin: 9px 2px 0 0;
+}
+.gnb-area .gnb-inner .list-item.ico-live::after{
+    width: 54px;
+    height: 20px;
+    background-position: -202px -299px;
+    vertical-align: top;
+    content: '';
+    display: block;
+    margin: 5px 2px 0 0;
+}
+
+.gnb-area .gnb-inner .btn-more{
+    float: left;
+    margin-left: 17px;
+    font-size: 13px;
+    line-height: 30px;
+    color: #202020;
+    text-align: right;
+}
+.gnb-area .gnb-inner .btn-more::after{
+    display: inline-block;
+    width: 11px;
+    height: 7px;
+    background-position: -444px -330px;
+    vertical-align: top;
+    content: '';
+    margin-left: 7px;
+    vertical-align: 2px;
+}
+.gnb-area .gnb-inner .list-item+.list-item{
+    margin-left: 12px;
+}
+.gnb-area .gnb-inner .gnb-list+.gnb-list{
+    margin-left: 12px;
+}
+.gnb-area .gnb-inner .weather-area{
+    float: right;
+    line-height: 30px;
+}
+
+
+
+/* footer */
+footer{
+    background-color: #fafbfc;
+    border-top: 1px solid #e4e8eb;
+}
+.footer-container{
+    width: 1130px;
+    padding: 0 30px 92px;
+    margin: 0 auto;
+}
+.footer-container .banner-area{
+    overflow: hidden;
+    padding: 24px 0;
+    border-bottom: 1px solid #e4e8eb
+}
+.footer-container .banner-area li{
+    width: 350px;
+    height: 86px;
+    border: 0pt none;
+    float: left;
+}
+.footer-container .banner-area li+li{
+    margin-left: 40px;
+}
+.footer-container .banner-area img{
+    overflow: hidden;
+    position: relative;
+    width: 160px; 
+    height: 86px;
+    border: 0px;
+    vertical-align: bottom;
+    float: left;
+}
+.footer-container .banner-area .cont-box{
+    overflow: hidden;
+    height: 86px;
+    padding: 2px 2px 0 16px;
+    font-size: 12px;
+    line-height: 1.25;
+    box-sizing: border-box;
+    text-align: left
+}
+.footer-container .cont-box em{
+    display: block;
+    overflow: hidden;
+    font-weight: 700;
+    letter-spacing: -0.25px;
+    color: #58c464;
+    white-space: nowrap;
+}
+.footer-container .cont-box .title{
+    display: block;
+    margin-top: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.26px;
+    color: #242424;
+    white-space: nowrap;
+}
+.footer-container .cont-box p{
+    overflow: hidden;
+    line-height: 18px;
+    letter-spacing: -0.25px;
+    color: #424242;
+    white-space: nowrap;
+}
+.footer-container .cont-box .cont{
+    margin-top: 8px;
+}
+
+
+
+
+.footer-container .notice-area{
+    overflow: hidden;
+    padding: 16px 0 15px;
+    border-bottom: 1px solid #e4e8eb;
+}
+.footer-container .notice-area .title{
+    float: left; margin-right: 13px;
+    color: #202020;
+}
+.footer-container .notice-area .ser-link{
+    float: right;
+    font-weight: 700;
+    color: #202020;
+}
+.footer-container .notice-area .ser-link::after{
+    display: inline-block;
+    width: 8px;
+    height: 12px;
+    background-position: -444px -268px;
+    vertical-align: top;
+    content: '';
+    margin-left: 10px;
+    vertical-align: -2px;
+}
+
+
+
+
+.footer-container .aside-area{
+    overflow: hidden;
+    border-bottom: 1px solid #e4e8eb;
+}
+
+.aside-area .link-list{
+    float: left;
+    width: 780px;
+    padding: 20px 0;
+}
+.aside-area .partner-box{
+    overflow: hidden;
+}
+.aside-area .partner-box+.partner-box{
+    margin-top: 9px;
+}
+.aside-area .partner-box .title{
+    float: left;
+    width: 87px;
+}
+.aside-area .partner-box .link-partner{
+    float: left;
+    color: #777;
+}
+.aside-area .partner-box .link-partner+.link-partner::before{
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    background-color: #e4e8eb;
+    vertical-align: -1px;
+    margin: 0 8px;
+}
+
+
+.aside-area .service-list{
+    overflow: hidden;
+    float: right;
+    width: 350px;
+    padding: 28px 0;
+}
+.aside-area .service-list .service-box{
+    overflow: hidden;
+    float: left;
+    width: 150px;
+}
+.aside-area .service-list .service-box .logo{
+    float: right;
+    margin-left: 12px;
+}
+.aside-area .service-list .down-title{
+    overflow: hidden;
+    float: left;
+}
+.aside-area .service-list img{
+    height: 48px;
+    width: 48px;
+}
+.aside-area .service-list .down-title .title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    padding-top: 2px;
+}
+.aside-area .service-list .down-title .sub{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    padding-top: 2px;
+}
+
+
+
+
+
+.aside-area .service-list .down-box{
+    overflow: hidden;
+    float: left;
+    margin-left: 50px;
+}
+.aside-area .service-list .down-box .logo{
+    float: right;
+    margin-left: 12px;
+}
+.aside-area .service-list .down-box img{
+    height: 48px;
+}
+
+.aside-area .down-box .down-title .title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    padding-top: 2px;
+}
+.aside-area .down-box .down-title .sub{
+    color: grey;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    padding-top: 2px;
+} 
+
+
+
+
+
+
+
+.corp-area{padding-top: 25px;}
+.corp-area .corp-list{
+    overflow: hidden;
+    float: left;
+    margin-right: 13px;
+}
+.corp-area .corp-list .corp-item{
+    float: left;
+    color: #777;
+}
+
+.corp-area .corp-list .corp-item+.corp-item::before{
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    margin: 0 8px;
+    background-color: #e4e8eb;
+    vertical-align: -1px;
+}
+.corp-area .adr{
+    float: left;
+    color: #202020;
+    font-weight: 700;
+}
