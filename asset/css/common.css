@@ -30,6 +30,8 @@
 .gnb-area .gnb-inner .list-item .ico-tv,
 .gnb-area .gnb-inner .list-item.ico-live::after,
 .gnb-area .gnb-inner .btn-more::after,
+.gnb-area .weather-area .air-box.normal::before,
+.gnb-area .weather-area .air-box.good::before,
 .sc-news .news-issue .issue-box .media::after,
 .sc-news .group-title .title-area .link-title::before,
 .sc-news .group-title .title-area .link-title::after,

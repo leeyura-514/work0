@@ -266,6 +266,46 @@ body{
     float: right;
     line-height: 30px;
 }
+.gnb-area .weather-area a{display: block;}
+.gnb-area .weather-area .air-list{
+    float: left;
+    overflow: hidden;
+}
+.gnb-area .weather-area .air-item{float: left; color: #505050;}
+.gnb-area .weather-area .air-item + .air-item::before{
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background-color: #e4e8eb;
+    margin: 0 10px;
+    vertical-align: -1px;
+}
+.gnb-area .weather-area .air-box{
+    margin-left: 7px;
+    font-size: 13px;
+    color: #202020;
+    font-weight: bold;
+}
+.gnb-area .weather-area .air-box.normal::before{
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-position: -420px -266px;
+    vertical-align: -4px;
+    margin-right: 5px;
+}
+.gnb-area .weather-area .air-box.good::before{
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-position: -420px -286px;
+    vertical-align: -4px;
+    margin-right: 5px;
+}
+
 
 
 
